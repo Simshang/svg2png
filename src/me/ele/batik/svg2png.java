@@ -8,7 +8,7 @@ import java.io.File;
 
 public class svg2png {
 
-    private static final int DPI = 72;
+    private static final int DPI = 100;
     private static final String newline = "\n";
     private float baseDensity = Density.MDPI.getMultiplier();
 

@@ -20,8 +20,8 @@ public class FileChooserDemo extends JPanel implements ActionListener {
     private JFileChooser fileChooser;
 
     private String svgFolder;
-    private static final int DPI = 72;
-    private float baseDensity = Density.MDPI.getMultiplier();
+    private static final int DPI = 100;
+    private float baseDensity = Density.StdDPI.getMultiplier();
 
     public FileChooserDemo(Container pane) {
         super(new BorderLayout());
@@ -171,7 +171,7 @@ public class FileChooserDemo extends JPanel implements ActionListener {
         if (!folder.isDirectory()) {
             svgFolder = folder.getParent();
         }
-        File file = new File(svgFolder, "../pngs/UyghurPngs_"
+        File file = new File(svgFolder, "../pngs/Uyghur_"
                 + density.name().toLowerCase());
         if (!file.exists()) {
             file.mkdirs();

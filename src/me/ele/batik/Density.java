@@ -2,12 +2,14 @@ package me.ele.batik;
 
 public enum Density {
 
-    LDPI(0.75f),
-    MDPI(1),
-    HDPI(1.5f),
-    XHDPI(2),
-    XXHDPI(3),
-    XXXHDPI(4);
+    SDPI(0.25f),
+    LDPI(0.5f),
+    MDPI(0.75f),
+    StdDPI(1),
+    HDPI(1.25f),
+    XHDPI(1.5f),
+    XXHDPI(1.75f),
+    XXXHDPI(2);
 
     float multiplier;
 
