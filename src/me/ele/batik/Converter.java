@@ -37,10 +37,8 @@ public class Converter {
 		float ratio = density.multiplier / baseDensity;
 		int outWidth = Math.round(svgResource.getWidth() * ratio);
 		int outHeight = Math.round(svgResource.getHeight() * ratio);
-		transcoder.addTranscodingHint(ImageTranscoder.KEY_WIDTH, new Float(
-				outWidth));
-		transcoder.addTranscodingHint(ImageTranscoder.KEY_HEIGHT, new Float(
-				outHeight));
+		transcoder.addTranscodingHint(ImageTranscoder.KEY_WIDTH, new Float(outWidth));
+		transcoder.addTranscodingHint(ImageTranscoder.KEY_HEIGHT, new Float(outHeight));
 
 		String svgURI = svgResource.getFile().toURI().toString();
 		TranscoderInput input = new TranscoderInput(svgURI);
@@ -52,8 +50,7 @@ public class Converter {
 			outStream.flush();
 			outStream.close();
 		} catch (TranscoderException e) {
-			System.err.println("Could not transcode "
-					+ svgResource.getFileName());
+			System.err.println("Could not transcode " + svgResource.getFileName());
 			destination.delete();
 			return;
 		} catch (IOException e) {

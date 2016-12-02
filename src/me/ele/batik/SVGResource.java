@@ -52,8 +52,11 @@ public class SVGResource {
         BridgeContext bridgeContext = new BridgeContext(userAgent);
         org.apache.batik.parser.UnitProcessor.Context context = UnitProcessor.createContext(bridgeContext, svgElement);
 
-        width = (int) UnitProcessor.svgHorizontalLengthToUserSpace(svgElement.getWidth().getBaseVal().getValueAsString(), "",context);
-        height = (int) UnitProcessor.svgVerticalLengthToUserSpace(svgElement.getWidth().getBaseVal().getValueAsString(), "",context);
+        // width = (int) UnitProcessor.svgHorizontalLengthToUserSpace(svgElement.getWidth().getBaseVal().getValueAsString(), "",context);
+        // height = (int) UnitProcessor.svgVerticalLengthToUserSpace(svgElement.getWidth().getBaseVal().getValueAsString(), "",context);
+        // set dpi
+        width = dpi;
+        height = dpi;
 
         canBeRead = true;
     }

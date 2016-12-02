@@ -20,7 +20,7 @@ public class FileChooserDemo extends JPanel implements ActionListener {
     private JFileChooser fileChooser;
 
     private String svgFolder;
-    private static final int DPI = 100;
+    private static final int DPI = 64;
     private float baseDensity = Density.StdDPI.getMultiplier();
 
     public FileChooserDemo(Container pane) {
@@ -40,7 +40,7 @@ public class FileChooserDemo extends JPanel implements ActionListener {
         startButton.addActionListener(this);
 
         SpinnerModel spinnerModel = new SpinnerListModel(Density.values());
-        spinnerModel.setValue(Density.MDPI);
+        spinnerModel.setValue(Density.StdDPI);
         spinner = new JSpinner(spinnerModel);
         if (spinner.getEditor() instanceof JSpinner.DefaultEditor) {
             JSpinner.DefaultEditor editor = (JSpinner.DefaultEditor) spinner
